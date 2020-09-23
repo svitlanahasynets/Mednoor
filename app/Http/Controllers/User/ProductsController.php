@@ -34,4 +34,15 @@ class ProductsController extends UserController
                      ]
         );
     }
+
+    public function edit($id)
+    {
+        $product = Product::find($id);
+
+        return view('user.products.play', 
+                    [
+                        'product' => $product
+                     ]
+        );
+    }
 }
